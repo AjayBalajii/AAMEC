@@ -1,5 +1,4 @@
 // import Attendance from "../Pages/Attendance";
-import { Component } from "react/cjs/react.production.min";
 import Attendance from "../pages/Attendance";
 import ClassDetails from "../pages/ClassDetails";
 import Home from "../pages/Home";

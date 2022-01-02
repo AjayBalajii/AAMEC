@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import App from "../App";
+// import App from "../App";
 import { actionTypes } from "../contextAPI/reducer";
 import { useStateValue } from "../contextAPI/StateProvider";
 import logo from "../assets/logo.png"

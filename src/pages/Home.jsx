@@ -107,26 +107,11 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Hide this modal and show the first with the button below.
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
+
                 <a style={{ textDecoration: 'none' }} data-bs-toggle="modal" href="#exampleModalToggle" role="button">
                     <div className='card sm align-items-center' style={{ maxWidth: "13rem", color: 'black' }}>
                         <img src={add} alt="" height='50px' width="50px" /><br />
-                        <h5 className='addclass'>Add Class</h5>
+                        <h5 className='addclass'>Create Class</h5>
                     </div>
                 </a>
                 <Link to="/class_details" style={{ textDecoration: 'none' }}>
@@ -138,7 +123,7 @@ const Home = () => {
 
             </div>
         </div>
-    )
+    );
 }
 
 export default Home;
