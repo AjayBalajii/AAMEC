@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import add from "../assets/add.png"
 import group from '../assets/group.png'
-
+import app from '../utils/firebase';
 
 const Home = () => {
 
@@ -21,15 +21,29 @@ const Home = () => {
 
     }
 
-    const handleSubmit = () => {
-        alert(JSON.stringify(createclass));
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert("hii")
+        const fire = app.database().ref();
+
+        const classdata = {
+            classname: classname,
+            strength: strength,
+            year: year,
+            incharge: incharge,
+        }
+        fire.push(classdata);
+        alert(classdata);
+        console.log(classdata);
+        // document.getElementById("modal").style.visibility = "hidden";
+
     }
 
     return (
         <div className="conatiner">
             <div style={{ display: 'flex', }}>
                 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-dialog modal-dialog-centered" id='modal'>
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalToggleLabel">Create Class</h5>
